@@ -5,7 +5,7 @@ import os
 
 # Starts programs lists options
 def startProgram():
-  print("""
+    print("""
   ██╗    ██╗███████╗██╗      ██████╗ ██████╗ ███╗   ███╗███████╗██╗
 ██║    ██║██╔════╝██║     ██╔════╝██╔═══██╗████╗ ████║██╔════╝██║
 ██║ █╗ ██║█████╗  ██║     ██║     ██║   ██║██╔████╔██║█████╗  ██║
@@ -15,29 +15,30 @@ def startProgram():
                                                                  
   """)
 
+    print("Welcome to my Program! \nWhat would you like to see")
+    print("(1) About me\n(2) Interests\n(3) exit")
 
-  print("Welcome to my Program! \nWhat would you like to see")
-  print("(1) About me\n(2) Interests\n(3) exit")
+    nav = input(
+        "What would you like to do? Enter a number based on the menu above ↑\n"
+    )
 
-  nav = input("What would you like to do? Enter a number based on the menu above ↑\n")
-
-  if "1" in nav:
-    bio()
-  elif "2" in nav:
-    interests()
-  elif "3" in nav:
-    os.system('clear')
-    exit()
-  else:
-    print('Error: Try again!')
+    if "1" in nav:
+        bio()
+    elif "2" in nav:
+        interests()
+    elif "3" in nav:
+        os.system('clear')
+        exit()
+    else:
+        print('Error: Try again!')
 
 
-# Choice functions 
+# Choice functions
 def bio():
-  
-  os.system('clear')
 
-  print("""
+    os.system('clear')
+
+    print("""
      █████████   █████                          █████   
   ███░░░░░███ ░░███                          ░░███    
  ░███    ░███  ░███████   ██████  █████ ████ ███████  
@@ -50,8 +51,8 @@ def bio():
                                                       
                                                       
   """)
-  
-  print("""
+
+    print("""
 
   My name is Thomas. I am going to be a junior this year. 
   I have been in Milton my entire life. 
@@ -62,11 +63,12 @@ def bio():
   
   
   """)
-  returnText()
+    returnText()
+
 
 def interests():
-  os.system('clear')
-  print(""" 
+    os.system('clear')
+    print(""" 
   
     ███              █████                                         █████           
  ░░░              ░░███                                         ░░███            
@@ -81,7 +83,7 @@ def interests():
                                                                                  
   """)
 
-  print("""My main interests are technology and cars.
+    print("""My main interests are technology and cars.
   
   Here are some cool things about me: 
 
@@ -98,10 +100,11 @@ def interests():
 
   """)
 
-  returnText()
+    returnText()
+
 
 def returnText():
-  what = input("""
+    what = input("""
   would you like to return to the main menu?
   Would you like to go to another section of this project?
   Would you like to exit this program?
@@ -110,18 +113,17 @@ def returnText():
 
   """)
 
+    if "1" in what:
+        os.system('clear')
+        startProgram()
+    elif "2" in what:
+        quit()
 
-
-  if "1" in what:
-    os.system('clear')
-    startProgram()
-  elif "2" in what:
-    quit()
-  
 
 startProgram()
 
-nav = input("What would you like to do? Enter a number based on the menu above ↑\n")
+nav = input(
+    "What would you like to do? Enter a number based on the menu above ↑\n")
 
 if "1" in nav:
     bio()
@@ -130,6 +132,4 @@ elif "2" in nav:
 elif "3" in nav:
     exit()
 else:
-  print('Error: Try again!')
-
-
+    print('Error: Try again!')
