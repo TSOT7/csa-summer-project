@@ -117,6 +117,7 @@ def returnText():
         os.system('clear')
         startProgram()
     elif "2" in what:
+        os.system('clear')
         quit()
 
 
